@@ -1,12 +1,12 @@
 body {
   margin: 0;
+  font-family: 'Poppins', sans-serif;
   background: #CBDAFB;
 }
 
 .header {
   display: flex;
   justify-content: space-around;
-  background: #CBDAFB;
   padding: 10px 0;
 }
 
@@ -111,5 +111,114 @@ body {
 }
 
 .home .section_1 .hero_bg button:hover{
+  background: #b9347b;
+}
+
+.home .section_2{
+  display: flex;
+  background: #0F265C;
+  justify-content: space-between;
+}
+
+.home .section_2 img{
+  width: 40rem;
+}
+
+.home .section_2 .stat_segment{
+  display: flex;
+  margin: 2rem 15rem 0 0;
+}
+
+.home .section_2 .stat_segment .stat{
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  height: 100%;
+  margin: 0 30px;
+}
+
+.home .section_2 .stat_segment .stat:nth-child(1) .stat_rect{
+  width: 100%;
+  height: 50%;
+  border-radius: 5px 5px 0 0;
+  background: #DDF6E6;
+  padding: 15px;
+}
+
+.home .section_2 .stat_segment .stat:nth-child(2) .stat_rect{
+  width: 100%;
+  height: 70%;
+  border-radius: 5px 5px 0 0;
+  background: #FFCCD3;
+  padding: 20px;
+}
+
+.home .section_2 .stat_segment .stat:nth-child(3) .stat_rect{
+  width: 100%;
+  height: 25%;
+  border-radius: 5px 5px 0 0;
+  background: #88CDA1;
+  padding: 18px;
+}
+
+.home .section_2 .stat_segment .stat:nth-child(4) .stat_rect{
+  width: 100%;
+  height: 60%;
+  border-radius: 5px 5px 0 0;
+  background: #C7B9F6;
+  padding: 15px;
+}
+
+.home .section_2 .stat_segment .stat .stat_rect p{
+  text-align: center;
+  font-size: 1.2em;
+  color: #333333;
+}
+
+.home .section_2 .stat_segment .stat h3{
+  text-align: center;
+  color: #ffffff;
+  font-size: 2em;
+}
+
+.home .section_3{
+  display: flex;
+  justify-content: space-around;
+  background: #B4F5FF;
+  padding: 3rem 0 0;
+}
+
+.home .section_3 img{
+  width: 40em;
+}
+
+.home .section_3 .req_segment h3{
+  font-size: 3.9em;
+  font-weight: 700;
+  color: #004542;
+  line-height: 1.2em;
+  letter-spacing: -2px;
+  margin-bottom: 0;
+}
+
+.home .section_3 .req_segment p{
+  color: #004542;
+  font-size: 1.25em;
+  font-weight: 400;
+}
+
+.home .section_3 .req_segment button{
+  text-transform: uppercase;
+  background: #D73F91;
+  color: #ffffff;
+  font-size: .9em;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home .section_3 .req_segment button:hover{
   background: #b9347b;
 }
