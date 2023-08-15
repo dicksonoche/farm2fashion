@@ -3,6 +3,11 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #CBDAFB;
 }
+body p{
+  color: #004542;
+  font-size: 1.25em;
+  font-weight: 400;
+}
 
 .header {
   display: flex;
@@ -53,7 +58,7 @@ body {
   font-weight: 500;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -106,7 +111,7 @@ body {
   font-weight: 500;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -140,7 +145,7 @@ body {
 .home .section_2 .stat_segment .stat:nth-child(1) .stat_rect{
   width: 100%;
   height: 50%;
-  border-radius: 5px 5px 0 0;
+  border-radius: 16px 16px 0 0;
   background: #DDF6E6;
   padding: 15px;
 }
@@ -148,7 +153,7 @@ body {
 .home .section_2 .stat_segment .stat:nth-child(2) .stat_rect{
   width: 100%;
   height: 70%;
-  border-radius: 5px 5px 0 0;
+  border-radius: 16px 16px 0 0;
   background: #FFCCD3;
   padding: 20px;
 }
@@ -156,7 +161,7 @@ body {
 .home .section_2 .stat_segment .stat:nth-child(3) .stat_rect{
   width: 100%;
   height: 25%;
-  border-radius: 5px 5px 0 0;
+  border-radius: 16px 16px 0 0;
   background: #88CDA1;
   padding: 18px;
 }
@@ -164,7 +169,7 @@ body {
 .home .section_2 .stat_segment .stat:nth-child(4) .stat_rect{
   width: 100%;
   height: 60%;
-  border-radius: 5px 5px 0 0;
+  border-radius: 16px 16px 0 0;
   background: #C7B9F6;
   padding: 15px;
 }
@@ -182,10 +187,12 @@ body {
 }
 
 .home .section_3{
+  position: relative;
   display: flex;
   justify-content: space-around;
   background: #B4F5FF;
   padding: 3rem 0 0;
+  overflow: hidden;
 }
 
 .home .section_3 img{
@@ -198,7 +205,7 @@ body {
   color: #004542;
   line-height: 1.2em;
   letter-spacing: -2px;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .home .section_3 .req_segment p{
@@ -215,10 +222,223 @@ body {
   font-weight: 500;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 .home .section_3 .req_segment button:hover{
   background: #b9347b;
+}
+
+.home .section_3::after{
+  content: "";
+  position: absolute;
+  top: 23em;
+  left: -15px;
+  width: 70%;
+  height: 20px;
+  background: transparent;
+  border-top: 10em solid #ffccd3;
+  transform: rotate(4deg);
+  transform-origin: top left;
+}
+
+.home .section_3::before{
+  content: "";
+  position: absolute;
+  top: 23em;
+  right: 0px;
+  width: 50%;
+  height: 20px;
+  background: transparent;
+  border-top: 10em solid #C1B8F6;
+  transform: rotate(-6deg);
+  transform-origin: top right;
+}
+
+.home .section_4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #FFCCD3 0%, #FFDEE1 100%);
+}
+
+.home .section_4 .trace{
+  position: relative;
+  width: 100%;
+  display: flex;
+  background: #C1B8F6;
+  overflow: hidden;
+  border-bottom: 1px wavy #fff;
+}
+
+/*.home .section_4 .trace::before{
+  content: "";
+  position: absolute;
+  top: 0em;
+  left: -15px;
+  width: 100%;
+  height: 20px;
+  background: transparent;
+  border-top: 5em solid #ffccd3;
+  transform: rotate(-6deg);
+  transform-origin: top left;
+}*/
+
+.home .section_4 .trace::after{
+  content: "";
+  position: absolute;
+  bottom: 9em;
+  left: -1em;
+  width: 70%;
+  height: 20px;
+  background: transparent;
+  border-top: 6em solid #ffccd3;
+  transform: rotate(-5deg);
+  transform-origin: top left;
+}
+
+.home .section_4 .trace .origin{
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid #000000;
+  margin: 1em 0 1em 0;
+}
+
+.home .section_4 .trace .origin h4{
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+  color: #004542;
+  margin: 2em 0 1em 0;
+}
+
+.home .section_4 .trace .text{
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0 1em 0;
+}
+
+.home .section_4 .trace_able{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home .section_4 .trace_able::before{
+  content: "";
+  width: 100%;
+  height: 65px;
+  position: absolute;
+  top: -0.3%;
+  left: 0;
+  transform: rotate(180deg);
+  background-size: auto;
+  background-repeat: repeat no-repeat;
+  background-position: 32vw bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23c1b8f6'/></svg>");
+}
+
+@media(max-width:850px) {
+  .home .section_4 .trace_able::before{    
+    height: 32.5px
+  }  
+}
+
+.home .section_4 .trace_able h3{
+  font-size: 3.9em;
+  font-weight: 700;
+  color: #0E40BB;
+  line-height: 1.2em;
+  letter-spacing: -2px;
+  margin: 1.5em 0 0 1.3em;
+}
+
+.home .section_4 .trace_able p{
+  color: #0E40BB;
+  margin: 0 0 0 4.3em;
+}
+
+.home .section_4 .apart{
+  width: 100%;
+  display: flex;
+  margin: 1em 0;
+}
+
+.home .section_4 .apart .sewing{
+  width: 50%;
+}
+
+.home .section_4 .apart .sewing img{
+  width: 43em;
+}
+
+.home .section_4 .platform{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .section_4 .platform >div{
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #C1B8F6;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+.home .section_4 .platform >div img{
+  height: 2em;
+  width: 6%;
+  padding: 0 16px;
+}
+
+.home .section_4 .platform >div p{
+  width: 94%;
+  margin: 0.5em;
+}
+
+.home .section_4 .platform >div:nth-child(5){
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #c1b8f600;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.home .section_4 .platform >div button{
+  text-transform: uppercase;
+  background: #D73F91;
+  color: #ffffff;
+  font-size: .9em;
+  font-weight: 500;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.home .section_4 .platform >div button:hover{
+  background: #b9347b;
+}
+
+.home .section_5 .hero_bg{
+  height: 50rem;
+  background-image: url("images/Asset.png");
+  background-size: cover;
+  background-color: #CBDAFB;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0 4.5rem;
 }

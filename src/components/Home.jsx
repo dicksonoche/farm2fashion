@@ -3,6 +3,11 @@ import '../index.css';
 import Header from './Header.jsx';
 import CarryImg from '../images/femCar.png'
 import Macbook from '../images/Macbook.png'
+import Sew from '../images/Group.png'
+import FirstIsolate from '../images/Isolation_1.png'
+import SecondIsolate from '../images/Isolation_2.png'
+import ThirdIsolate from '../images/Isolation_3.png'
+import FourthIsolate from '../images/Isolation_4.png'
 
 const Home = () => {
     return (
@@ -59,6 +64,65 @@ const Home = () => {
                         </p>
                         <button>Request a Demo</button>
                     </div>
+                </div>
+                <div className='section_4'>
+                    <div className='trace'>
+                        <div className='origin'>
+                            <h4>Trace The Origin</h4>
+                        </div>
+                        <div className='text'>
+                            <p>By incorporating profiles of the processors involved at each stage, TraceBale <br />
+                                empowers brands to gain insights into the origins of their products. Retailers can now <br />
+                                understand and verify the precise sources of their materials, enhancing transparency <br />
+                                and accountability.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='trace_able'>
+                        <h3>Traceable - One Platform to Navigate <br />
+                            The Challenges of The Textile Industry
+                        </h3>
+                        <p>TraceBale by CottonConnect revolutionizes supply chain management, by providing complete traceability <br />
+                            in the supply chain and help brands target sustainability goals and validate claims.
+                        </p>
+                    </div>
+                    <div className='apart'>
+                        <div className='sewing'>
+                            <img src={Sew} alt="" />
+                        </div>
+                        <div className='platform'>
+                            <div>
+                                <img src={FirstIsolate} alt='' />
+                                <p><b>Regular data intake</b> at farm/gin level – <br />
+                                    <b>real-time availability</b> of seed cotton/lint.
+                                </p>
+                            </div>
+                            <div>
+                                <img src={SecondIsolate} alt='' />
+                                <p>Every <b>transaction</b> at every stage<br />
+                                    <b>recorded</b> - proof of Chain of Custody.
+                                </p>
+                            </div>
+                            <div>
+                                <img src={ThirdIsolate} alt='' />
+                                <p><b>Process</b> and <b>sale differentiation</b> for all<br />
+                                    processors.
+                                </p>
+                            </div>
+                            <div>
+                                <img src={FourthIsolate} alt='' />
+                                <p>Bale tracking back to farm level – <br />
+                                    <b>Unique farmer/bale/yarn IDs.</b>
+                                </p>
+                            </div>
+                            <div>
+                                <button>Know your platform in detail</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='section_5'>
+                    <div className='hero_bg'></div>
                 </div>
             </div>
         </>
