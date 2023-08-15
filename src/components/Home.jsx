@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import '../index.css';
-import Header from './Header.jsx';
+import Header from './Header';
+import Footer from "./Footer";
 import CarryImg from '../images/femCar.png'
 import Macbook from '../images/Macbook.png'
 import Sew from '../images/Group.png'
@@ -10,6 +11,29 @@ import ThirdIsolate from '../images/Isolation_3.png'
 import FourthIsolate from '../images/Isolation_4.png'
 
 const Home = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // Calculate the position of the section_2 relative to the viewport
+            const revealDiv = document.querySelector(".section_2", ".mac_image", "req_segment");
+            const revealDivPosition = revealDiv.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            // If the top of the section_2 is visible within the viewport
+            if (revealDivPosition < windowHeight) {
+                setIsVisible(true);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <>
             <Header />
@@ -26,7 +50,7 @@ const Home = () => {
                         <button>Request a Demo</button>
                     </div>
                 </div>
-                <div className='section_2'>
+                <div className={`section_2 ${isVisible ? "show" : ""}`}>
                     <img src={CarryImg} alt="" />
                     <div className='stat_segment'>
                         <div className='stat'>
@@ -56,8 +80,8 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='section_3'>
-                    <img src={Macbook} alt="" />
-                    <div className='req_segment'>
+                    <img className={`mac_image ${isVisible ? "show" : ""}`} src={Macbook} alt="" />
+                    <div className={`req_segment ${isVisible ? "show" : ""}`}>
                         <h3>Say Hello <br /> To Tracebale</h3>
                         <p>CottonConnect offers a unique and <br /> customizable platform - TraceBale, designed <br />
                             specifically for the textile industry.
@@ -122,11 +146,21 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='section_5'>
-                    <div className='hero_bg'></div>
+                    <div className='hero_bg'>
+                        <div className='final_segment'>
+                            <h3>TraceBale Powered by CottonConnect</h3>
+                            <p>CottonConnect help brands access more sustainable cotton and other natural fibres to create <br />
+                                transparent, traceable and resilient supply chains that will continue to deliver the best raw materials <br />
+                                – now and in the future.
+                            </p>
+                        </div>
+                        <button>Know more about cottonconnect</button>
+                    </div>
                 </div>
             </div>
+            <Footer />
         </>
     )
 }
 
-export default Home
+export default Home;
