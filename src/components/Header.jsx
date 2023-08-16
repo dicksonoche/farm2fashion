@@ -2,6 +2,7 @@ import React from 'react'
 import '../index.css';
 import { Link } from 'react-router-dom';
 import Logo from '../images/logo.png'
+import HamburgerMenu from './HamburgerMenu';
 
 
 const Header = () => {
@@ -25,9 +26,10 @@ const Header = () => {
                         <li>
                             <Link to="#">Request for Demo</Link>
                         </li>
+                        <button>Login</button>
                     </ul>
-                    <button>Login</button>
                 </div>
+                <HamburgerMenu />
             </div>
         </>
     )

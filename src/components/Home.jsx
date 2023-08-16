@@ -95,9 +95,9 @@ const Home = () => {
                             <h4>Trace The Origin</h4>
                         </div>
                         <div className='text'>
-                            <p>By incorporating profiles of the processors involved at each stage, TraceBale <br />
-                                empowers brands to gain insights into the origins of their products. Retailers can now <br />
-                                understand and verify the precise sources of their materials, enhancing transparency <br />
+                            <p>By incorporating profiles of the processors involved at each stage, TraceBale
+                                empowers brands to gain insights into the origins of their products. Retailers can now
+                                understand and verify the precise sources of their materials, enhancing transparency
                                 and accountability.
                             </p>
                         </div>
